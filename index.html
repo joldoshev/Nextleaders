@@ -324,8 +324,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 Phone: phoneInput.value
             };
 
-            // Send the data to your PHP script
-            fetch('submit-to-bitrix.php', {
+            // Send the data to your Netlify function
+            fetch('/.netlify/functions/submit-bitrix', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -350,53 +350,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('form[data-form-id="myform"]');
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
 
-            const formData = new FormData(form);
-            const data = {
-                Name: formData.get('Name'),
-                Email: formData.get('Email'),
-                Phone: formData.get('Phone')
-            };
-
-            const submitButton = form.querySelector('button[type="submit"]');
-            const originalButtonText = submitButton.textContent;
-            submitButton.textContent = 'Sending...';
-            submitButton.disabled = true;
-
-            fetch('/.netlify/functions/submit-bitrix', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data),
-            })
-            .then(response => response.json())
-            .then(result => {
-                if (result.success) {
-                    // You can replace this with a more sophisticated success message
-                    alert('Thank you! Your message has been sent.');
-                    form.reset();
-                } else {
-                    // You can replace this with a more sophisticated error message
-                    alert('An error occurred: ' + result.message);
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('A network error occurred. Please try again.');
-            })
-            .finally(() => {
-                submitButton.textContent = originalButtonText;
-                submitButton.disabled = false;
-            });
-        });
-    }
-});
-</script>
 </body> </html>

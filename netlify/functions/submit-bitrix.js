@@ -10,7 +10,7 @@ exports.handler = async (event, context) => {
     };
   }
 
-  const bitrixWebhookUrl = 'https://nextgeneration.bitrix24.kz/rest/5584/ti4fotjmrh46o7zy/';
+    const bitrixWebhookUrl = 'https://nextgeneration.bitrix24.kz/rest/55843/ti4fotjmrh46o7zy/crm.lead.add.json';
 
   try {
     const data = JSON.parse(event.body);

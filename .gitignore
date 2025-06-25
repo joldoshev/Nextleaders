@@ -1,1 +1,6 @@
 node_modules
+.DS_Store
+netlify.toml
+.netlifyignore
+windsurf_deployment.yaml
+vercel.json
