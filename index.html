@@ -325,7 +325,7 @@ document.addEventListener('DOMContentLoaded', function() {
             };
 
             // Send the data to your Netlify function
-            fetch('/.netlify/functions/submit-bitrix', {
+            fetch('/submit', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
