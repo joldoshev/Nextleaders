@@ -1,0 +1,94 @@
+/* Custom Styles */
+
+/* --- Mobile Optimization (max-width: 480px) --- */
+@media (max-width: 480px) {
+  /* Target the specific artboard container */
+  #rec910380916 .t396__artboard {
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  #rec910380916 .t396__artboard__content {
+    height: auto !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px 40px 20px; /* Add padding top for space */
+    position: relative !important;
+  }
+
+  /* Reset all direct children elements to flow vertically */
+  #rec910380916 .tn-elem {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    max-width: 340px; /* Consistent width for content */
+    margin: 0 auto;
+    transform: none !important; /* Reset transforms */
+  }
+
+  /* 1. Main Headline */
+  .tn-elem__9103809161742825695295 {
+    order: 1;
+    margin-bottom: 20px !important;
+    text-align: center !important;
+  }
+  .tn-elem__9103809161742825695295 .tn-atom {
+      font-size: 28px !important;
+  }
+
+  /* 2. The Card Wrapper */
+  .mobile-card-wrapper {
+    order: 2;
+    width: 100% !important;
+    max-width: 340px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px !important;
+  }
+
+  /* Sub-headline (inside card) */
+  .tn-elem__9103809161742825695304 {
+    margin-bottom: 25px !important;
+    text-align: center !important;
+  }
+   .tn-elem__9103809161742825695304 .tn-atom {
+      font-size: 16px !important;
+  }
+
+  /* Button (inside card) */
+  .tn-elem__9103809161742825695292 {
+     margin-bottom: 0 !important;
+  }
+  .tn-elem__9103809161742825695292 .tn-atom {
+      height: 50px !important;
+      font-size: 15px !important;
+  }
+
+  /* 3. Globe Image */
+  .tn-elem__9103809161742825736413 {
+    order: 3;
+    width: 150% !important; /* Make it wider than the content */
+    max-width: 500px !important;
+    margin-top: -80px !important; /* Pull it up slightly */
+    margin-left: -25% !important; /* Re-center it after width increase */
+    z-index: -1; /* Place it behind the card content visually */
+    opacity: 0.5;
+  }
+
+  /* Hide the original decorative elements that are not needed */
+  .tn-elem__9103809161742825695283, /* Original white shape */
+  .tn-elem__9103809161742825695307, /* Small circle */
+  .tn-elem__9103809161742825695309, /* Small circle */
+  .tn-elem__9103809161742825695310, /* Small circle */
+  .tn-elem__9103809161742825695312 { /* Small circle */
+    display: none !important;
+  }
+}
