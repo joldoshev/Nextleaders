@@ -14,7 +14,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname)));
 
 // Your Bitrix24 webhook URL
-const BITRIX_WEBHOOK_URL = 'https://nextgeneration.bitrix24.kz/rest/55843/ti4fotjmrh46o7zy/crm.lead.add.json';
+// Your Bitrix24 webhook URL - now loaded from an environment variable
+const BITRIX_WEBHOOK_URL = process.env.BITRIX_WEBHOOK_URL;
 
 // Handle form submissions at the /submit endpoint
 app.post('/submit', async (req, res) => {
