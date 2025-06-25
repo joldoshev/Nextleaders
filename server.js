@@ -76,3 +76,6 @@ app.post('/submit', (req, res) => {
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
+
+// Export the app for Vercel
+module.exports = app;
