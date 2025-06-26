@@ -9,11 +9,12 @@
   }
 
   #rec910380916 .t396__artboard__content {
-    height: auto !important;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 80px 20px 40px 20px; /* Add padding top for space */
+    width: 100%;
+    padding: 80px 20px 40px 20px;
+    box-sizing: border-box;
     position: relative !important;
   }
 
@@ -72,6 +73,39 @@
       font-size: 15px !important;
   }
 
+  /* NEW: Wrapper for the Education First block */
+  .education-first-wrapper {
+    order: 2; /* It should come after the main headline */
+    display: flex;
+    align-items: center; /* Vertically align items in the middle */
+    width: 100% !important;
+    max-width: 340px;
+    margin-bottom: 20px !important;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  /* The image inside the new wrapper */
+  .education-first-wrapper .tn-elem__9103809161742825695287 {
+    flex: 0 0 80px; /* Do not grow, do not shrink, base width of 80px */
+    margin-right: 20px; /* Space between image and text */
+    margin-bottom: 0 !important; /* Reset bottom margin */
+  }
+
+  /* The text content inside the new wrapper */
+  .education-first-wrapper .tn-elem__9103809161742825695304 {
+    flex: 1; /* Allow text to take up remaining space */
+    text-align: left !important; /* Align text to the left */
+    margin-bottom: 0 !important; /* Reset bottom margin */
+  }
+
+  .education-first-wrapper .tn-elem__9103809161742825695304 .tn-atom {
+      font-size: 14px !important; /* Adjust font size for better fit */
+  }
+
   /* 3. Globe Image */
   .tn-elem__9103809161742825736413 {
     order: 3;
@@ -91,4 +125,109 @@
   .tn-elem__9103809161742825695312 { /* Small circle */
     display: none !important;
   }
+
+  /* --- Video Section Mobile Adaptation --- */
+  #rec910584727 .tn-elem[data-elem-id="1742832436239"] {
+      position: relative !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      width: calc(100% - 40px) !important; /* Full width with 20px padding on each side */
+      padding-top: 50% !important; /* Maintain aspect ratio */
+      height: 0 !important;
+  }
+
+  #rec910584727 .tn-elem[data-elem-id="1742832436239"] iframe {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+}
+
+@media (max-width: 480px) {
+  /* --- General Mobile Layout --- */
+  .t-rec {
+    padding-top: 80px !important; /* Add space for sticky header */
+  }
+
+  #rec910380916 .t396__artboard__content {
+    position: relative !important;
+  }
+
+  #rec910380916 .tn-elem {
+    position: static !important;
+    transform: none !important;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    max-width: 340px;
+    margin-bottom: 20px !important;
+  }
+
+  /* --- Typography --- */
+  #rec910380916 .tn-elem[data-elem-id="1742825695295"] .tn-atom {
+    font-size: 28px !important;
+    line-height: 1.2 !important;
+  }
+
+  #rec910380916 .tn-elem[data-elem-id="1742825695304"] .tn-atom {
+    font-size: 16px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* --- Buttons --- */
+  #rec910380916 .tn-elem[data-elem-type="button"] .tn-atom {
+    padding: 15px 20px !important;
+    font-size: 16px !important;
+  }
+
+  /* --- Hide Decorative Elements --- */
+  #rec910380916 .tn-elem[data-elem-id="1742825695307"],
+  #rec910380916 .tn-elem[data-elem-id="1742825695309"],
+  #rec910380916 .tn-elem[data-elem-id="1742825695310"],
+  #rec910380916 .tn-elem[data-elem-id="1742825695312"],
+  #rec910380916 .tn-elem[data-elem-id="1742825695283"] {
+    display: none !important;
+  }
+
+  /* --- Header --- */
+  #rec910741201 .t396__artboard {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    height: 60px !important;
+    padding: 0 20px !important;
+    background-color: #ffffff !important;
+    z-index: 999 !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  #rec910741201 .tn-elem {
+    position: static !important;
+    transform: none !important;
+    width: auto !important;
+    height: auto !important;
+  }
+
+  #rec910741201 .tn-elem[data-elem-id="1742839067303"] .tn-atom {
+    width: 60px !important;
+    height: auto !important;
+  }
+
+  #rec910741201 .tn-elem[data-elem-id="1742839076190"] .tn-atom {
+    font-size: 14px !important;
+    font-weight: bold !important;
+    color: #ffffff !important;
+    background-color: #fa7145 !important;
+    padding: 8px 16px !important;
+    border-radius: 20px !important;
+    white-space: nowrap;
+  }
+
 }
